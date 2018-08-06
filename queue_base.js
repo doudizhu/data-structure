@@ -31,12 +31,14 @@
     }
  }
 
- let queue = new Queue();
- console.log(queue.isEmpty());
- queue.enqueue('jack');
- queue.enqueue('lisa');
- queue.enqueue('tom');
- queue.print();
- queue.dequeue();
- queue.dequeue();
- queue.print();
+//  let queue = new Queue();
+//  console.log(queue.isEmpty());
+//  queue.enqueue('jack');
+//  queue.enqueue('lisa');
+//  queue.enqueue('tom');
+//  queue.print();
+//  queue.dequeue();
+//  queue.dequeue();
+//  queue.print();
+
+module.exports = Queue;
