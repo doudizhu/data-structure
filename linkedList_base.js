@@ -34,7 +34,26 @@ function LinkedList(){
 
     }
     this.removeAt = function(position,element){
+        if(position>-1 && position<length){
+            let current = head;
+            let previous;
+            let index = 0;
 
+            if(position === 0){
+                head = current.next;
+            }else{
+                while(index++ < position){
+                    previous = current;
+                    current = current.next;
+                }
+            }
+            
+            previous.next = current.next;
+            length--;
+            return current.element;
+        }else{
+            return null;
+        }
     }
     this.indexOf = function(element){
 
@@ -63,4 +82,7 @@ list.append(10);
 console.log(list.size());
 list.append(5);
 list.append(4);
+list.print();
+
+list.removeAt(1);
 list.print();
